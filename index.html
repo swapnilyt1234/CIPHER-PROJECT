@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DecentraVote — Web3 Voting Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">DecentraVote</div>
+    <div class="top-actions">
+      <button id="connectBtn" class="btn">Connect Wallet</button>
+      <div id="walletDisplay" class="wallet hidden"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="left-col">
+      <div class="card">
+        <h2>Candidates</h2>
+        <div id="candidatesList" class="candidates-grid"></div>
+      </div>
+
+      <div class="card">
+        <h2>Controls</h2>
+        <div class="controls">
+          <button id="verifyBtn" class="btn">Verify Blockchain Integrity</button>
+          <button id="exportBtn" class="btn">Export Chain JSON</button>
+          <button id="clearBtn" class="btn danger">Reset Demo</button>
+        </div>
+        <div id="message" class="message"></div>
+      </div>
+
+      <div id="adminPanel" class="card hidden">
+        <h2>Admin Panel</h2>
+        <input id="newCandName" placeholder="Candidate name" />
+        <input id="newCandParty" placeholder="Party" />
+        <input id="newCandImg" placeholder="Image URL (optional)" />
+        <div style="margin-top:8px">
+          <button id="addCandidateBtn" class="btn">Add Candidate</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="right-col">
+      <div class="card">
+        <h2>Live Dashboard</h2>
+        <div id="dashboard" class="dashboard"></div>
+      </div>
+
+      <div class="card">
+        <h2>Blockchain Explorer</h2>
+        <div id="explorer" class="explorer"></div>
+      </div>
+
+      <div class="card">
+        <h2>Wallet</h2>
+        <div class="wallet-info">
+          <div>Address: <span id="addrShort">—</span></div>
+          <div>Balance: <span id="balance">0</span></div>
+          <div>Voted: <span id="votedStatus">No</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Connect your MetaMask wallet to vote • Blockchain-based voting demo
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
