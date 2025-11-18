@@ -175,23 +175,23 @@
 
   const UI = {
     init(){
-      this.connectBtn = $('#connectBtn');
-      this.walletDisplay = $('#walletDisplay');
-      this.candidatesList = $('#candidatesList');
+      this.connectBtn = $('#connectbut');
+      this.walletDisplay = $('#walletdis');
+      this.candidatesList = $('#candidatelist');
       this.dashboard = $('#dashboard');
       this.explorer = $('#explorer');
-      this.verifyBtn = $('#verifyBtn');
-      this.exportBtn = $('#exportBtn');
-      this.clearBtn = $('#clearBtn');
+      this.verifyBtn = $('#verifybut');
+      this.exportBtn = $('#exportbut');
+      this.clearBtn = $('#clearbut');
       this.message = $('#message');
-      this.addrShort = $('#addrShort');
+      this.addrShort = $('#addshort');
       this.balanceEl = $('#balance');
-      this.votedStatus = $('#votedStatus');
-      this.adminPanel = $('#adminPanel');
+      this.votedStatus = $('#votestatus');
+      this.adminPanel = $('#adminpanel');
       this.addCandidateBtn = $('#addCandidateBtn');
-      this.newCandName = $('#newCandName');
-      this.newCandParty = $('#newCandParty');
-      this.newCandImg = $('#newCandImg');
+      this.newCandName = $('#candname');
+      this.newCandParty = $('#candparty');
+      this.newCandImg = $('#candimg');
 
       this.bind();
       this.renderAll();
@@ -436,8 +436,8 @@
     renderWalletInfo(){
       const wallet = getWallet();
       if(wallet){
-        $('#walletDisplay').classList.remove('hidden');
-        $('#walletDisplay').textContent = short(wallet.address);
+        $('#walletdis').classList.remove('hide');
+        $('#walletdis').textContent = short(wallet.address);
         this.addrShort.textContent = wallet.address;
         this.balanceEl.textContent = wallet.isMetaMask ? `${wallet.balance} ETH` : wallet.balance;
         this.votedStatus.textContent = hasVoted(wallet.address) ? 'Yes' : 'No';
@@ -447,7 +447,7 @@
           this.adminPanel.classList.add('hidden');
         }
       } else {
-        $('#walletDisplay').classList.add('hidden');
+        $('#walletdis').classList.add('hide');
         this.addrShort.textContent = '—';
         this.balanceEl.textContent = '0';
         this.votedStatus.textContent = 'No';

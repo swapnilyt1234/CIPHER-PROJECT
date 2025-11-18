@@ -34,7 +34,7 @@ body{
   font-size:20px;
   color:var(--accent);
 }
-.top-actions{display:flex;align-items:center;gap:12px}
+.topaction{display:flex;align-items:center;gap:12px}
 .btn{
   padding:10px 18px;
   border-radius:10px;
@@ -96,7 +96,7 @@ body{
   color:var(--accent);
 }
 
-.candidates-grid{
+.candidategrid{
   display:flex;
   flex-direction:column;
   gap:12px;
@@ -160,6 +160,7 @@ body{
 .candidate .vote-actions{display:flex;gap:8px;align-items:center}
 
 .hidden{display:none}
+.hide{display:none}
 
 .message{
   margin-top:12px;
@@ -246,6 +247,24 @@ body{
 
 .footer{text-align:center;padding:18px;color:var(--muted);font-size:13px;}
 
+.walletinf{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  font-size:14px;
+}
+.walletinf > div{
+  padding:8px 12px;
+  background:rgba(255,255,255,0.02);
+  border-radius:8px;
+  border-left:3px solid var(--accent);
+}
+.walletinf code{
+  font-family:monospace;
+  color:var(--accent);
+  font-weight:600;
+}
+
 .wallet-info{
   display:flex;
   flex-direction:column;
@@ -268,6 +287,37 @@ body{
   display:flex;
   flex-direction:column;
   gap:10px;
+}
+
+#adminpanel input,
+#candname,
+#candparty,
+#candimg{
+  width:100%;
+  padding:10px 14px;
+  margin-bottom:8px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:8px;
+  color:#e6eef6;
+  font-size:14px;
+  transition:all 0.3s ease;
+}
+#adminpanel input:focus,
+#candname:focus,
+#candparty:focus,
+#candimg:focus{
+  outline:none;
+  border-color:var(--accent);
+  background:rgba(255,255,255,0.05);
+  box-shadow: 0 0 0 3px rgba(110,231,183,0.1);
+}
+#adminpanel input::placeholder,
+#candname::placeholder,
+#candparty::placeholder,
+#candimg::placeholder{
+  color:var(--muted);
+  opacity:0.6;
 }
 
 #adminPanel input{
@@ -336,6 +386,7 @@ body{
 
 @media (max-width:920px){
   .container{grid-template-columns:1fr; padding:12px}
+  .rightcolu{order:2}
   .right-col{order:2}
   .topbar{padding:14px 18px}
   .card{padding:16px}
